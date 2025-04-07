@@ -1,4 +1,10 @@
 // package EXCEPTION;
+
+// public class ExceptionalHandlingDemo {
+    
+// }
+
+
 // Custom Checked Exception
 class AgeException extends Exception {
     public AgeException(String message) {
@@ -64,36 +70,4 @@ public class ExceptionHandlingDemo {
         System.out.println("Program continues after all exception handling.");
     }
 }
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class CheckedExceptionWithoutFile {
-
-    // Method that throws a checked exception
-    public static void printDate(String dateStr) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        Date date = sdf.parse(dateStr); // throws ParseException
-        System.out.println("Parsed date: " + date);
-    }
-
-    public static void main(String[] args) {
-        // Example 1: ParseException (Checked)
-        try {
-            printDate("31-02-2023"); // Invalid date (Feb doesn't have 31)
-        } catch (ParseException e) {
-            System.out.println("Caught ParseException: " + e.getMessage());
-        }
-
-        // Example 2: InterruptedException (Checked)
-        try {
-            System.out.println("Sleeping for 2 seconds...");
-            Thread.sleep(2000); // throws InterruptedException
-            System.out.println("Awake now!");
-        } catch (InterruptedException e) {
-            System.out.println("Caught InterruptedException: " + e.getMessage());
-        }
-
-        System.out.println("Program finished.");
-    }
-}
