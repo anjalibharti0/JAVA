@@ -1,4 +1,4 @@
-// package threading.java;
+// package threading.j
 class A implements Runnable{
     public void run(){
         System.out.println("the thread is running.........");
@@ -19,3 +19,4 @@ public class thread1 {
     // t2.join();
     }
 }
+

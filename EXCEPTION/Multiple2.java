@@ -3,7 +3,7 @@
 // public class Multiple2 {
     
 // }
-public class MultiTryCatchExample2 {
+public class Multiple2 {
     public static void main(String[] args) {
 
         try {
