@@ -1,10 +1,3 @@
-// package EXCEPTION;
-
-// public class ExceptionalHandlingDemo {
-    
-// }
-
-
 // Custom Checked Exception
 class AgeException extends Exception {
     public AgeException(String message) {

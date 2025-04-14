@@ -1,4 +1,4 @@
-// package JAVA.EXCEPTION;
+package JAVA.EXCEPTION;
 
 public class abc {
     public static void main(String[] args) {

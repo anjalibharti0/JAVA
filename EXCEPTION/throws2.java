@@ -1,41 +1,41 @@
-class negativeException extends Exception{
+class NegativeRadiusException extends Exception {
     @Override
-    
-        public String toString(){
-            return"radius cant be negative";
+    public String toString() {
+        return "Radius can't be negative";
+    }
+
+    @Override
+    public String getMessage() {
+        return "Radius can't be negative";
+    }
+}
+
+public class Throws2 {
+
+    public static double area(int r) throws NegativeRadiusException {
+        if (r < 0) {
+            throw new NegativeRadiusException(); // Fixed: use `new` keyword
         }
-        @Override
-        public String getMessage(){return "radius cant be negative";}
+        return Math.PI * r * r;
     }
 
-
-
-public class throws2{
-    public static double area(int r)throws NegativeRadiusException{
-        if(r<0){
-            throw NegativeRadiusException();
-        }
-        double result=Math.PI*r*r;
-        return result;
+    public static int divide(int a, int b) throws ArithmeticException {
+        return a / b;
     }
-     public static int divide(int a,int b) throws ArithematicException{//harray ne bata diya ki yh function throw krta h error
-        int result=a/b;//made by harry
-        return result;
-    }
+
     public static void main(String[] args) {
-        try{
-            //shivam divide krna chahta h function created by harry
-        int c=divide(6,0);}
+        try {
+            int c = divide(6, 0); // This will throw ArithmeticException
+            System.out.println(c);
+        } catch (ArithmeticException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
 
-        System.out.println(c);}
-        catch(Exception e){
-        System.out.println("Eception",e.getMessage());
-   
+        try {
+            double a = area(-6); // This will throw NegativeRadiusException
+            System.out.println(a);
+        } catch (NegativeRadiusException e) {
+            System.out.println("Exception: " + e.getMessage());
         }
-        try{
-            area(6);//throws give the overview that it is negative exception
-        }
-      catch(Eception e){
-        System.out.println("Exception");
-      }    
     }
+}

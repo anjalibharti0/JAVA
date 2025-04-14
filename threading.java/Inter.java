@@ -12,6 +12,9 @@ class MyRunnable implements Runnable {
         Thread.yield(); // Yield control to other threads
         System.out.println(Thread.currentThread().getName() + " finished.");
     }
+    public static void display(){
+        System.out.println("this is the folder to check");
+    }
 }
 
 public class Inter {
